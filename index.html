@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naufal Solusi Teknologi (NST) - Solusi Digital Terbaik</title>
+  <link rel="icon" href="logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <style>
+    :root {
+      --primary-color: #2563eb;
+      --primary-dark: #1d4ed8;
+      --accent-color: #10b981;
+      --accent-hover: #059669;
+      --bg-color: #f8fafc;
+      --text-color: #1e293b;
+      --header-bg: rgba(255, 255, 255, 0.95);
+      --footer-bg: #0f172a;
+      --footer-text: #e2e8f0;
+      --card-bg: #ffffff;
+      --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      --hover-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      --transition: all 0.3s ease-in-out;
+    }
+
+    * { 
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box; 
+    }
+
+    body { 
+      font-family: 'Segoe UI', Tahoma, sans-serif; 
+      background-color: var(--bg-color); 
+      color: var(--text-color); 
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    header { 
+      background-color: var(--header-bg); 
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+      position: fixed; 
+      width: 100%;
+      top: 0; 
+      z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+
+    .container { 
+      max-width: 1200px; 
+      margin: 0 auto; 
+      padding: 0 2rem; 
+    }
+
+    .nav-brand img { 
+      height: 50px;
+      transition: var(--transition);
+    }
+
+    .nav-brand img:hover {
+      transform: scale(1.05);
+    }
+
+    nav { 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      padding: 0.8rem 0; 
+    }
+
+    .nav-toggle { 
+      display: none; 
+      font-size: 1.5rem; 
+      cursor: pointer;
+      color: var(--primary-color);
+    }
+
+    .nav-links { 
+      display: flex; 
+      gap: 1.5rem; 
+      list-style: none; 
+    }
+
+    .nav-links a { 
+      text-decoration: none; 
+      color: var(--text-color); 
+      font-weight: 500;
+      position: relative;
+      padding: 0.5rem 0;
+      transition: var(--transition);
+    }
+
+    .nav-links a:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--primary-color);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-color);
+    }
+
+    .nav-links a:hover:after {
+      width: 100%;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      background: var(--accent-color);
+      color: white;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      box-shadow: 0 4px 6px rgba(16, 185, 129, 0.2);
+    }
+
+    .btn:hover {
+      background: var(--accent-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 15px rgba(16, 185, 129, 0.2);
+    }
+
+    .btn-primary {
+      background: var(--primary-color);
+      box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      box-shadow: 0 10px 15px rgba(37, 99, 235, 0.2);
+    }
+
+    .hero { 
+      background: linear-gradient(to right, #2563eb, #3b82f6);
+      color: #fff;
+      text-align: center;
+      padding: 8rem 1rem 6rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero:before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -10%;
+      width: 120%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+      transform: rotate(-25deg);
+    }
+
+    .hero h1 { 
+      font-size: 3rem; 
+      margin-bottom: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    .hero p { 
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      opacity: 0.9;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+      font-size: 2.5rem;
+      color: var(--text-color);
+      position: relative;
+      padding-bottom: 1rem;
+    }
+
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--primary-color);
+      border-radius: 2px;
+    }
+
+    .section {
+      padding: 6rem 1rem;
+    }
+
+    .section-light {
+      background-color: var(--bg-color);
+    }
+
+    .section-dark {
+      background-color: #f1f5f9;
+    }
+
+    .services-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+      gap: 2rem; 
+    }
+
+    .service-item { 
+      background: var(--card-bg); 
+      padding: 2rem; 
+      border-radius: 10px; 
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .service-item:hover { 
+      transform: translateY(-10px); 
+      box-shadow: var(--hover-shadow);
+    }
+
+    .service-item:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--primary-color);
+      z-index: -1;
+      transition: var(--transition);
+    }
+
+    .service-item:hover:before {
+      height: 100%;
+      opacity: 0.05;
+    }
+
+    .service-item i {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    .service-item h3 { 
+      margin-bottom: 1rem; 
+      color: var(--text-color);
+      font-size: 1.5rem;
+    }
+
+    .service-item p {
+      color: #64748b;
+    }
+
+    .gallery { 
+      padding: 6rem 1rem; 
+    }
+
+    .gallery-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+      gap: 1.5rem; 
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      aspect-ratio: 4/3;
+    }
+
+    .gallery-item img { 
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+      padding: 1.5rem;
+      color: #fff;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: var(--transition);
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .gallery-overlay h4 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact {
+      background: var(--card-bg);
+      padding: 6rem 1rem;
+      position: relative;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .contact-info {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .contact-info h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-color);
+    }
+
+    .contact-method {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-method i {
+      font-size: 1.5rem;
+      color: var(--primary-color);
+      margin-right: 1rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      background: rgba(37, 99, 235, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-method div {
+      color: #64748b;
+    }
+
+    .contact-method h4 {
+      color: var(--text-color);
+      margin-bottom: 0.25rem;
+    }
+
+    .whatsapp-form { 
+      flex: 1;
+      min-width: 300px;
+      display: flex; 
+      flex-direction: column; 
+      gap: 1.5rem;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .form-group label {
+      font-weight: 500;
+      color: var(--text-color);
+    }
+
+    .form-control {
+      padding: 1rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+    }
+
+    .whatsapp-form button { 
+      padding: 1rem; 
+      width: 100%;
+      font-size: 1.1rem;
+    }
+
+    .testimonials {
+      padding: 6rem 1rem;
+      background: linear-gradient(to right, #f1f5f9, #e2e8f0);
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .testimonial-item {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      margin-bottom: 1.5rem;
+      color: #64748b;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .testimonial-author img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .testimonial-author-info h4 {
+      color: var(--text-color);
+      margin-bottom: 0.25rem;
+    }
+
+    .testimonial-author-info p {
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+
+    .quote-icon {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 3rem;
+      color: rgba(37, 99, 235, 0.1);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      text-align: center;
+      margin-top: 4rem;
+    }
+
+    .stat-item {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-text {
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    .logo-bottom {
+      text-align: center;
+      margin: 4rem 0 0;
+      padding: 2rem 0;
+      background: linear-gradient(to bottom, transparent, rgba(37, 99, 235, 0.05));
+    }
+
+    .logo-bottom img {
+      height: 200px;
+      width: auto;
+      transition: var(--transition);
+    }
+
+    .logo-bottom img:hover {
+      transform: scale(1.05);
+    }
+
+    footer { 
+      background-color: var(--footer-bg); 
+      color: var(--footer-text); 
+      padding: 4rem 1rem 2rem; 
+      text-align: center; 
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 3rem;
+      text-align: left;
+      margin-bottom: 3rem;
+    }
+
+    .footer-col h3 {
+      color: #fff;
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-bottom: 0.75rem;
+    }
+
+    .footer-col h3:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 2px;
+      background: var(--primary-color);
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-links a {
+      color: #cbd5e1;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+      padding-left: 5px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      color: #fff;
+      transition: var(--transition);
+    }
+
+    .social-links a:hover {
+      background: var(--primary-color);
+      transform: translateY(-3px);
+    }
+
+    .copyright {
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 50px;
+      height: 50px;
+      background: var(--primary-color);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: var(--transition);
+      opacity: 0;
+      visibility: hidden;
+      z-index: 99;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background: var(--primary-dark);
+      transform: translateY(-5px);
+    }
+
+    @media (max-width: 768px) {
+      .nav-toggle { 
+        display: block; 
+      }
+      
+      .nav-links { 
+        position: fixed; 
+        top: 70px; 
+        left: 0; 
+        width: 100%; 
+        flex-direction: column; 
+        background: var(--card-bg); 
+        display: none; 
+        padding: 1rem 0;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+      }
+      
+      .nav-links.active { 
+        display: flex; 
+      }
+      
+      .nav-links a { 
+        padding: 1rem 2rem;
+        width: 100%;
+        display: block;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .section {
+        padding: 4rem 1rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .contact-container {
+        flex-direction: column;
+      }
+    }
+
+    .slide-in-left {
+      animation: slideInLeft 0.6s ease-out both;
+    }
+
+    @keyframes slideInLeft {
+      0% {
+        transform: translateX(-100px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="nav-brand"><img src="logo.png" alt="NST Logo"></div>
+        <div class="nav-toggle" id="navToggle"><i class="fas fa-bars"></i></div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Beranda</a></li>
+          <li><a href="#about">Tentang Kami</a></li>
+          <li><a href="#services">Layanan</a></li>
+          <li><a href="#gallery">Portfolio</a></li>
+          <li><a href="#testimonials">Testimonial</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="container">
+      <h1 data-aos="fade-up">Solusi Teknologi Terbaik untuk Bisnis Anda</h1>
+      <p data-aos="fade-up" data-aos-delay="100">Naufal Solusi Teknologi (NST) menyediakan berbagai layanan digital dan elektronik yang berkualitas untuk memenuhi kebutuhan teknologi Anda</p>
+      <div class="hero-buttons">
+        <a href="#services" class="btn btn-primary" data-aos="fade-up" data-aos-delay="200">Lihat Layanan</a>
+        <a href="#contact" class="btn" data-aos="fade-up" data-aos-delay="300">Hubungi Kami</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light" id="about">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Tentang Kami</h2>
+      <div class="about-content" data-aos="fade-up" data-aos-delay="100">
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem; color: #64748b;">
+          Naufal Solusi Teknologi (NST) adalah penyedia layanan teknologi terpercaya yang telah melayani berbagai kebutuhan digital dan elektronik. Kami berkomitmen untuk memberikan solusi teknologi yang inovatif, berkualitas tinggi, dan sesuai dengan kebutuhan spesifik setiap klien.
+        </p>
+        <div class="stats">
+          <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="stat-number" id="statsClients">500</div>
+            <div class="stat-text">Klien Puas</div>
+          </div>
+          <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="stat-number" id="statsProjects">750</div>
+            <div class="stat-text">Projek Selesai</div>
+          </div>
+          <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="stat-number" id="statsExperience">5</div>
+            <div class="stat-text">Tahun Pengalaman</div>
+          </div>
+          <div class="stat-item" data-aos="fade-up" data-aos-delay="500">
+            <div class="stat-number" id="statsSupport">24/7</div>
+            <div class="stat-text">Dukungan Teknis</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="services">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Layanan Kami</h2>
+      <div class="services-grid">
+        <div class="service-item" data-aos="fade-up" data-aos-delay="100">
+          <i class="fas fa-globe"></i>
+          <h3>Pembuatan Website</h3>
+          <p>Kami merancang dan mengembangkan website profesional yang responsif dan menarik sesuai kebutuhan bisnis Anda.</p>
+        </div>
+        <div class="service-item" data-aos="fade-up" data-aos-delay="150">
+          <i class="fas fa-microchip"></i>
+          <h3>Solusi IoT</h3>
+          <p>Custom IoT solutions untuk mengotomatiskan bisnis dan menciptakan lingkungan rumah pintar yang efisien.</p>
+        </div>
+        <div class="service-item" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-tools"></i>
+          <h3>Troubleshoot Perangkat</h3>
+          <p>Jasa perbaikan profesional untuk laptop, komputer, dan handphone dengan garansi hasil kerja.</p>
+        </div>
+        <div class="service-item" data-aos="fade-up" data-aos-delay="250">
+          <i class="fas fa-laptop-code"></i>
+          <h3>Install Ulang & Upgrade</h3>
+          <p>Layanan instalasi Windows, upgrade SSD, dan peningkatan komponen hardware untuk performa optimal.</p>
+        </div>
+        <div class="service-item" data-aos="fade-up" data-aos-delay="300">
+          <i class="fas fa-cogs"></i>
+          <h3>Ganti Komponen</h3>
+          <p>Jasa penggantian LCD, baterai, keyboard, dan perbaikan hardware lainnya dengan kualitas terbaik.</p>
+        </div>
+        <div class="service-item" data-aos="fade-up" data-aos-delay="350">
+          <i class="fas fa-scroll"></i>
+          <h3>Running Text & Jadwal</h3>
+          <p>Instalasi dan konfigurasi display running text dan jam jadwal sholat otomatis untuk masjid dan gedung.</p>
+        </div>
+        <div class="service-item" data-aos="fade-up" data-aos-delay="400">
+          <i class="fas fa-video"></i>
+          <h3>Audio & Video</h3>
+          <p>Layanan operator sound system profesional, editing video, dan pembuatan poster untuk berbagai kebutuhan.</p>
+        </div>
+        <div class="service-item" data-aos="fade-up" data-aos-delay="450">
+          <i class="fas fa-network-wired"></i>
+          <h3>Jaringan & CCTV</h3>
+          <p>Jasa pemasangan dan konfigurasi jaringan LAN/WiFi serta sistem CCTV untuk keamanan optimal.</p>
+        </div>
+        <div class="service-item" data-aos="fade-up" data-aos-delay="500">
+          <i class="fas fa-print"></i>
+          <h3>Printing & Lainnya</h3>
+          <p>Layanan printing profesional dan berbagai solusi teknologi lainnya sesuai kebutuhan spesifik Anda.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light" id="gallery">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Portfolio Kami</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+          <img src="service1.jpg" alt="Website Development">
+          <div class="gallery-overlay">
+            <h4>Website E-commerce</h4>
+            <p>Pembangunan website toko online responsif dengan fitur pembayaran terintegrasi</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="150">
+          <img src="service2.jpg" alt="IoT Solution">
+          <div class="gallery-overlay">
+            <h4>Smart Home System</h4>
+            <p>Implementasi sistem rumah pintar dengan kontrol lampu dan perangkat otomatis</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+          <img src="service3.jpg" alt="Computer Repair">
+          <div class="gallery-overlay">
+            <h4>Upgrade Komputer Kantor</h4>
+            <p>Peningkatan performa 15 unit komputer dengan SSD dan RAM tambahan</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="250">
+          <img src="service4.jpg" alt="Network Installation">
+          <div class="gallery-overlay">
+            <h4>Jaringan Perusahaan</h4>
+            <p>Instalasi jaringan komprehensif untuk kantor dengan 25 perangkat</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+          <img src="service5.jpg" alt="CCTV Installation">
+          <div class="gallery-overlay">
+            <h4>Sistem CCTV</h4>
+            <p>Pemasangan 8 kamera CCTV dengan monitoring jarak jauh melalui aplikasi</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="350">
+          <img src="service6.jpg" alt="Running Text">
+          <div class="gallery-overlay">
+            <h4>Running Text Masjid</h4>
+            <p>Instalasi display running text dan jadwal sholat digital untuk masjid</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="testimonials">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Testimoni Pelanggan</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
+          <i class="fas fa-quote-right quote-icon"></i>
+          <p class="testimonial-text">"Layanan dari NST sangat profesional. Website toko online saya selesai tepat waktu dengan hasil yang sangat memuaskan. Desainnya modern dan responsif di semua perangkat."</p>
+          <div class="testimonial-author">
+            <img src="/api/placeholder/50/50" alt="Client Photo">
+            <div class="testimonial-author-info">
+              <h4>Ahmad Sulaiman</h4>
+              <p>Pemilik Toko Elektronik</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-item" data-aos="fade-up" data-aos-delay="150">
+          <i class="fas fa-quote-right quote-icon"></i>
+          <p class="testimonial-text">"NST sangat membantu dalam meningkatkan performa komputer kantor kami. Service cepat, profesional, dan hasilnya memuaskan. Sekarang komputer-komputer di kantor berjalan jauh lebih cepat!"</p>
+          <div class="testimonial-author">
+            <img src="/api/placeholder/50/50" alt="Client Photo">
+            <div class="testimonial-author-info">
+              <h4>Siti Rahayu</h4>
+              <p>Manager HR Perusahaan</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-quote-right quote-icon"></i>
+          <p class="testimonial-text">"Sistem CCTV yang dipasang NST bekerja dengan sangat baik. Saya bisa memantau toko dari mana saja melalui smartphone. Pelayanan after-sales juga sangat responsif!"</p>
+          <div class="testimonial-author">
+            <img src="/api/placeholder/50/50" alt="Client Photo">
+            <div class="testimonial-author-info">
+              <h4>Budi Santoso</h4>
+              <p>Pemilik Usaha Retail</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light" id="contact">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Hubungi Kami</h2>
+      <div class="contact-container">
+        <div class="contact-info" data-aos="fade-up" data-aos-delay="100">
+          <h3>Informasi Kontak</h3>
+          <div class="contact-method">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h4>Telepon / WhatsApp</h4>
+              <p>0858-9180-6242</p>
+            </div>
+          </div>
+          <div class="contact-method">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <p>officialnaufalh@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-method">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Lokasi</h4>
+              <p>Melayani seluruh wilayah Indonesia</p>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <form class="whatsapp-form" id="whatsappForm" data-aos="fade-up" data-aos-delay="200">
+          <div class="form-group">
+            <label for="whatsappName">Nama Lengkap</label>
+            <input type="text" id="whatsappName" class="form-control" placeholder="Masukkan nama lengkap Anda">
+          </div>
+          <div class="form-group">
+            <label for="whatsappEmail">Email</label>
+            <input type="email" id="whatsappEmail" class="form-control" placeholder="Masukkan email Anda">
+          </div>
+          <div class="form-group">
+            <label for="whatsappSubject">Subjek</label>
+            <input type="text" id="whatsappSubject" class="form-control" placeholder="Masukkan subjek pesan">
+          </div>
+          <div class="form-group">
+            <label for="whatsappMessage">Pesan</label>
+            <textarea id="whatsappMessage" rows="5" class="form-control" placeholder="Tulis pesan Anda..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Kirim Pesan via WhatsApp</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div class="logo-bottom">
+    <img src="logo.png" alt="NST Logo" data-aos="zoom-in">
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <h3>Naufal Solusi Teknologi</h3>
+          <p>Menyediakan berbagai solusi teknologi terbaik untuk kebutuhan digital dan elektronik Anda. Pelayanan profesional dengan hasil berkualitas.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Layanan Kami</h3>
+          <ul class="footer-links">
+            <li><a href="#services">Pembuatan Website</a></li>
+            <li><a href="#services">Solusi IoT</a></li>
+            <li><a href="#services">Troubleshoot Perangkat</a></li>
+            <li><a href="#services">Install Ulang & Upgrade</a></li>
+            <li><a href="#services">Instalasi Jaringan & CCTV</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Link Penting</h3>
+          <ul class="footer-links">
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#about">Tentang Kami</a></li>
+            <li><a href="#services">Layanan</a></li>
+            <li><a href="#gallery">Portfolio</a></li>
+            <li><a href="#testimonials">Testimonial</a></li>
+            <li><a href="#contact">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Hubungi Kami</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-phone"></i> 0858-9180-6242</li>
+            <li><i class="fas fa-envelope"></i> officialnaufalh@gmail.com</li>
+            <li><i class="fas fa-clock"></i> Senin - Sabtu: 08:00 - 18:00</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Naufal Solusi Teknologi. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    // Inisialisasi AOS (Animate on Scroll)
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 100
+    });
+
+    // Toggle menu mobile
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Close menu when clicking on a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+
+    // WhatsApp form
+    const form = document.getElementById('whatsappForm');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('whatsappName').value || '';
+      const email = document.getElementById('whatsappEmail').value || '';
+      const subject = document.getElementById('whatsappSubject').value || '';
+      const message = document.getElementById('whatsappMessage').value || '';
+      
+      const formattedMsg = encodeURIComponent(
+        `Nama: ${name}\nEmail: ${email}\nSubjek: ${subject}\n\nPesan:\n${message}`
+      );
+      
+      const phone = '6285891806242';
+      const url = `https://wa.me/${phone}?text=${formattedMsg}`;
+      window.open(url, '_blank');
+    });
+
+    // Back to Top button
+    const backToTopButton = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.add('visible');
+      } else {
+        backToTopButton.classList.remove('visible');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Animasi counter untuk statistik
+    function animateCounter(element, target, duration = 2000) {
+      let start = 0;
+      const increment = Math.ceil(target / (duration / 16));
+      
+      const timer = setInterval(() => {
+        start += increment;
+        
+        if (start >= target) {
+          element.textContent = target;
+          clearInterval(timer);
+        } else {
+          element.textContent = start;
+        }
+      }, 16);
+    }
+
+    // Inisialisasi animasi statistik saat elemen terlihat
+    const observerOptions = {
+      threshold: 0.5
+    };
+
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(document.getElementById('statsClients'), 500);
+          animateCounter(document.getElementById('statsProjects'), 750);
+          animateCounter(document.getElementById('statsExperience'), 5);
+          document.getElementById('statsSupport').textContent = '24/7';
+          statsObserver.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    statsObserver.observe(document.querySelector('.stats'));
+
+    // Smooth scrolling untuk anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Efek highlight pada navigasi saat scrolling
+    const sections = document.querySelectorAll('section');
+    const navItems = document.querySelectorAll('.nav-links a');
+    
+    window.addEventListener('scroll', () => {
+      let current = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.clientHeight;
+        
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      navItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('href') === `#${current}`) {
+          item.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
