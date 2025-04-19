@@ -684,6 +684,17 @@
       }
     }
 
+    #statsClients::after {
+    content: '+';
+  }
+
+  #statsProjects::after {
+    content: '+';
+  }
+
+  #statsExperience::after {
+    content: '+';
+  }
     .slide-in-left {
       animation: slideInLeft 0.6s ease-out both;
     }
@@ -708,7 +719,7 @@
         <div class="nav-toggle" id="navToggle"><i class="fas fa-bars"></i></div>
         <ul class="nav-links" id="navLinks">
           <li><a href="#home">Beranda</a></li>
-          <li><a href="#about">Tentang Kami</a></li>
+          <li><a href="#about">Tentang Saya</a></li>
           <li><a href="#services">Layanan</a></li>
           <li><a href="#gallery">Portfolio</a></li>
           <li><a href="#testimonials">Testimonial</a></li>
@@ -724,21 +735,21 @@
       <p data-aos="fade-up" data-aos-delay="100">Naufal Solusi Teknologi (NST) menyediakan berbagai layanan digital dan elektronik yang berkualitas untuk memenuhi kebutuhan teknologi Anda</p>
       <div class="hero-buttons">
         <a href="#services" class="btn btn-primary" data-aos="fade-up" data-aos-delay="200">Lihat Layanan</a>
-        <a href="#contact" class="btn" data-aos="fade-up" data-aos-delay="300">Hubungi Kami</a>
+        <a href="#contact" class="btn" data-aos="fade-up" data-aos-delay="300">Hubungi Saya</a>
       </div>
     </div>
   </section>
 
   <section class="section section-light" id="about">
     <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Tentang Kami</h2>
+      <h2 class="section-title" data-aos="fade-up">Tentang Saya</h2>
       <div class="about-content" data-aos="fade-up" data-aos-delay="100">
         <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem; color: #64748b;">
-          Naufal Solusi Teknologi (NST) adalah penyedia layanan teknologi terpercaya yang telah melayani berbagai kebutuhan digital dan elektronik. Kami berkomitmen untuk memberikan solusi teknologi yang inovatif, berkualitas tinggi, dan sesuai dengan kebutuhan spesifik setiap klien.
+          Naufal Solusi Teknologi (NST) adalah penyedia layanan teknologi terpercaya yang telah melayani berbagai kebutuhan digital dan elektronik. Saya berkomitmen untuk memberikan solusi teknologi yang inovatif, berkualitas tinggi, dan sesuai dengan kebutuhan spesifik setiap klien.
         </p>
         <div class="stats">
           <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
-            <div class="stat-number" id="statsClients">500</div>
+            <div class="stat-number" id="statsClients">50</div>
             <div class="stat-text">Klien Puas</div>
           </div>
           <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
@@ -760,12 +771,12 @@
 
   <section class="section section-dark" id="services">
     <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Layanan Kami</h2>
+      <h2 class="section-title" data-aos="fade-up">Layanan Saya</h2>
       <div class="services-grid">
         <div class="service-item" data-aos="fade-up" data-aos-delay="100">
           <i class="fas fa-globe"></i>
           <h3>Pembuatan Website</h3>
-          <p>Kami merancang dan mengembangkan website profesional yang responsif dan menarik sesuai kebutuhan bisnis Anda.</p>
+          <p>Saya merancang dan mengembangkan website profesional yang responsif dan menarik sesuai kebutuhan bisnis Anda.</p>
         </div>
         <div class="service-item" data-aos="fade-up" data-aos-delay="150">
           <i class="fas fa-microchip"></i>
@@ -813,48 +824,62 @@
 
   <section class="section section-light" id="gallery">
     <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Portfolio Kami</h2>
+      <h2 class="section-title" data-aos="fade-up">Portfolio Saya</h2>
       <div class="gallery-grid">
         <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
           <img src="service1.jpg" alt="Website Development">
           <div class="gallery-overlay">
-            <h4>Website E-commerce</h4>
-            <p>Pembangunan website toko online responsif dengan fitur pembayaran terintegrasi</p>
+            <h4>Website Booking Ruangan</h4>
+            <p>Pembangunan website Booking Ruangan General Affair responsif dengan fitur monitoring terintegrasi.</p>
           </div>
         </div>
         <div class="gallery-item" data-aos="fade-up" data-aos-delay="150">
           <img src="service2.jpg" alt="IoT Solution">
           <div class="gallery-overlay">
             <h4>Smart Home System</h4>
-            <p>Implementasi sistem rumah pintar dengan kontrol lampu dan perangkat otomatis</p>
+            <p>Implementasi sistem rumah pintar dengan kontrol lampu dan perangkat otomatis.</p>
           </div>
         </div>
         <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
-          <img src="service3.jpg" alt="Computer Repair">
+          <img src="service3.jpg" alt="Running Text">
           <div class="gallery-overlay">
-            <h4>Upgrade Komputer Kantor</h4>
-            <p>Peningkatan performa 15 unit komputer dengan SSD dan RAM tambahan</p>
+            <h4>Running Text Masjid</h4>
+            <p>Instalasi display running text dan jadwal sholat digital untuk masjid.</p>
           </div>
         </div>
         <div class="gallery-item" data-aos="fade-up" data-aos-delay="250">
           <img src="service4.jpg" alt="Network Installation">
           <div class="gallery-overlay">
             <h4>Jaringan Perusahaan</h4>
-            <p>Instalasi jaringan komprehensif untuk kantor dengan 25 perangkat</p>
+            <p>Instalasi jaringan komprehensif untuk kantor dengan 25+ perangkat.</p>
           </div>
         </div>
         <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
           <img src="service5.jpg" alt="CCTV Installation">
           <div class="gallery-overlay">
             <h4>Sistem CCTV</h4>
-            <p>Pemasangan 8 kamera CCTV dengan monitoring jarak jauh melalui aplikasi</p>
+            <p>Pemasangan 8 kamera CCTV dengan monitoring jarak jauh melalui aplikasi.</p>
           </div>
         </div>
         <div class="gallery-item" data-aos="fade-up" data-aos-delay="350">
-          <img src="service6.jpg" alt="Running Text">
+          <img src="service6.jpg" alt="Multimedia">
           <div class="gallery-overlay">
-            <h4>Running Text Masjid</h4>
-            <p>Instalasi display running text dan jadwal sholat digital untuk masjid</p>
+            <h4>Operator Sound System</h4>
+            <p>Mensetting sound system anda agar mendapatkan kualitas suara yang terbaik.</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="350">
+          <img src="service7.jpg" alt="Multimedia">
+          <div class="gallery-overlay">
+            <h4>Membuat Poster</h4>
+            <p>Membuat poster atau karya digital lainnya sesuai kebutuhan anda.</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="350">
+          <img src="service8.jpg" alt="Multimedia">
+          <div class="gallery-overlay">
+            <h4>Layanan Lainnya</h4>
+            <p>Saya insyaaAllah siap melayani anda dalam hal apapun selagi itu halal.</p>
           </div>
         </div>
       </div>
@@ -867,34 +892,36 @@
       <div class="testimonial-grid">
         <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
           <i class="fas fa-quote-right quote-icon"></i>
-          <p class="testimonial-text">"Layanan dari NST sangat profesional. Website toko online saya selesai tepat waktu dengan hasil yang sangat memuaskan. Desainnya modern dan responsif di semua perangkat."</p>
+          <p class="testimonial-text">"Makasih udah di support yaa fal (acara halal bihalal PT.IPPI)"</p>
           <div class="testimonial-author">
-            <img src="/api/placeholder/50/50" alt="Client Photo">
+            <img src="bu dwi.jpg" alt="Client Photo">
             <div class="testimonial-author-info">
-              <h4>Ahmad Sulaiman</h4>
-              <p>Pemilik Toko Elektronik</p>
+              <h4>Dwi Kumalasari</h4>
+              <p>HRD PT. Inti Pantja Press Industri</p>
             </div>
           </div>
         </div>
         <div class="testimonial-item" data-aos="fade-up" data-aos-delay="150">
           <i class="fas fa-quote-right quote-icon"></i>
-          <p class="testimonial-text">"NST sangat membantu dalam meningkatkan performa komputer kantor kami. Service cepat, profesional, dan hasilnya memuaskan. Sekarang komputer-komputer di kantor berjalan jauh lebih cepat!"</p>
+          <p class="testimonial-text">"makasih yaa fal (sudah membuatkan website LCS)"</p>
           <div class="testimonial-author">
-            <img src="/api/placeholder/50/50" alt="Client Photo">
+            <img src="mas daffa.jpg" alt="Client Photo">
             <div class="testimonial-author-info">
-              <h4>Siti Rahayu</h4>
-              <p>Manager HR Perusahaan</p>
+              <h4>Daffa Fajar Firjatullah</h4>
+              <p>Foreman GS/EHS PT. Inti Pantja Press Industri</p>
             </div>
           </div>
         </div>
         <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
           <i class="fas fa-quote-right quote-icon"></i>
-          <p class="testimonial-text">"Sistem CCTV yang dipasang NST bekerja dengan sangat baik. Saya bisa memantau toko dari mana saja melalui smartphone. Pelayanan after-sales juga sangat responsif!"</p>
+          <p class="testimonial-text">"Ooh begitu.. 
+            Baik lah.. 
+            Makasih ya Bi... (sudah membantu troubleshooting masalah laptop)"</p>
           <div class="testimonial-author">
-            <img src="/api/placeholder/50/50" alt="Client Photo">
+            <img src="bu kar.jpg" alt="Client Photo">
             <div class="testimonial-author-info">
-              <h4>Budi Santoso</h4>
-              <p>Pemilik Usaha Retail</p>
+              <h4>Karsinah</h4>
+              <p>Guru SMKN 5 Kota Bekasi</p>
             </div>
           </div>
         </div>
@@ -904,7 +931,7 @@
 
   <section class="section section-light" id="contact">
     <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Hubungi Kami</h2>
+      <h2 class="section-title" data-aos="fade-up">Hubungi Saya</h2>
       <div class="contact-container">
         <div class="contact-info" data-aos="fade-up" data-aos-delay="100">
           <h3>Informasi Kontak</h3>
@@ -943,14 +970,6 @@
             <input type="text" id="whatsappName" class="form-control" placeholder="Masukkan nama lengkap Anda">
           </div>
           <div class="form-group">
-            <label for="whatsappEmail">Email</label>
-            <input type="email" id="whatsappEmail" class="form-control" placeholder="Masukkan email Anda">
-          </div>
-          <div class="form-group">
-            <label for="whatsappSubject">Subjek</label>
-            <input type="text" id="whatsappSubject" class="form-control" placeholder="Masukkan subjek pesan">
-          </div>
-          <div class="form-group">
             <label for="whatsappMessage">Pesan</label>
             <textarea id="whatsappMessage" rows="5" class="form-control" placeholder="Tulis pesan Anda..."></textarea>
           </div>
@@ -971,14 +990,14 @@
           <h3>Naufal Solusi Teknologi</h3>
           <p>Menyediakan berbagai solusi teknologi terbaik untuk kebutuhan digital dan elektronik Anda. Pelayanan profesional dengan hasil berkualitas.</p>
           <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/falzsenpai"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/nfl.xyz/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@naufalhabibi12"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.linkedin.com/in/naufalhabibi12/"><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
         <div class="footer-col">
-          <h3>Layanan Kami</h3>
+          <h3>Layanan Saya</h3>
           <ul class="footer-links">
             <li><a href="#services">Pembuatan Website</a></li>
             <li><a href="#services">Solusi IoT</a></li>
@@ -991,7 +1010,7 @@
           <h3>Link Penting</h3>
           <ul class="footer-links">
             <li><a href="#home">Beranda</a></li>
-            <li><a href="#about">Tentang Kami</a></li>
+            <li><a href="#about">Tentang Saya</a></li>
             <li><a href="#services">Layanan</a></li>
             <li><a href="#gallery">Portfolio</a></li>
             <li><a href="#testimonials">Testimonial</a></li>
@@ -999,11 +1018,11 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h3>Hubungi Kami</h3>
+          <h3>Hubungi Saya</h3>
           <ul class="footer-links">
             <li><i class="fas fa-phone"></i> 0858-9180-6242</li>
             <li><i class="fas fa-envelope"></i> officialnaufalh@gmail.com</li>
-            <li><i class="fas fa-clock"></i> Senin - Sabtu: 08:00 - 18:00</li>
+            <li><i class="fas fa-clock"></i> Senin - Minggu : 24 Jam</li>
           </ul>
         </div>
       </div>
@@ -1048,12 +1067,10 @@
       e.preventDefault();
       
       const name = document.getElementById('whatsappName').value || '';
-      const email = document.getElementById('whatsappEmail').value || '';
-      const subject = document.getElementById('whatsappSubject').value || '';
       const message = document.getElementById('whatsappMessage').value || '';
       
       const formattedMsg = encodeURIComponent(
-        `Nama: ${name}\nEmail: ${email}\nSubjek: ${subject}\n\nPesan:\n${message}`
+        `Nama: ${name}\nPesan:\n${message}`
       );
       
       const phone = '6285891806242';
@@ -1104,9 +1121,9 @@
     const statsObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          animateCounter(document.getElementById('statsClients'), 500);
-          animateCounter(document.getElementById('statsProjects'), 750);
-          animateCounter(document.getElementById('statsExperience'), 5);
+          animateCounter(document.getElementById('statsClients'), 50);
+          animateCounter(document.getElementById('statsProjects'), 70);
+          animateCounter(document.getElementById('statsExperience'), 3);
           document.getElementById('statsSupport').textContent = '24/7';
           statsObserver.unobserve(entry.target);
         }
